@@ -1,4 +1,4 @@
-FROM 278380418400.dkr.ecr.eu-west-2.amazonaws.com/setup-tools:latest
+FROM aztec/setup-tools:latest
 FROM ubuntu:latest
 RUN apt update && apt install -y curl jq python3-pip
 RUN pip3 install awscli --upgrade

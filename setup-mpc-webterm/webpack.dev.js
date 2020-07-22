@@ -39,7 +39,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     proxy: {
       '/api': {
-        target: 'https://ignition.aztecprotocol.com',
+        target: 'http://localhost:8081',
         secure: false,
       },
     },

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-: ${API_URL=https://ignition.aztecprotocol.com}
+: ${API_URL=http://localhost:8081}
 : ${SETUP_DIR=$(pwd)/setup_db}
 : ${SIGS=$SETUP_DIR/sigs.json}
 : ${TRANSCRIPTS=20}

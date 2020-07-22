@@ -3,7 +3,7 @@ build:
   default:
     cmd: ../ci-scripts/build.sh
     args:
-      - aztecprotocol/build-image
+      - aztec/build-image
 commands:
   deploy-public:
     cmd: ../ci-scripts/deploy-public.sh

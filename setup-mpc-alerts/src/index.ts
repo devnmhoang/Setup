@@ -3,7 +3,7 @@ import { App } from './app';
 
 async function main() {
   const {
-    API_URL = 'https://ignition.aztecprotocol.com/api',
+    API_URL = 'http://localhost:8081/api',
     ALERT_TIME_LEFT = '600',
     SLACK_MPC_TOKEN = '',
   } = process.env;

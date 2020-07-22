@@ -2,7 +2,7 @@ version: '3'
 services:
   job-server:
     build: .
-    image: 278380418400.dkr.ecr.eu-west-2.amazonaws.com/job-server
+    image: aztec/job-server
     command: yarn start:dev
     environment:
       NODE_ENV: production

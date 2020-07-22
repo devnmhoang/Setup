@@ -131,7 +131,7 @@ resource "aws_ecs_task_definition" "setup_mpc_server" {
 [
   {
     "name": "setup-mpc-server",
-    "image": "278380418400.dkr.ecr.eu-west-2.amazonaws.com/setup-mpc-server:latest",
+    "image": "aztec/setup-mpc-server:latest",
     "essential": true,
     "memoryReservation": 256,
     "portMappings": [

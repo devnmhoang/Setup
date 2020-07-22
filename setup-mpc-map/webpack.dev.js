@@ -96,7 +96,7 @@ module.exports = [
       // },
       proxy: {
         '/api': {
-          target: 'https://ignition.aztecprotocol.com',
+          target: 'http://localhost:8081',
           secure: false,
         },
       },

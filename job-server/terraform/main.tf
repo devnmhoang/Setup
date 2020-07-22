@@ -121,7 +121,7 @@ resource "aws_ecs_task_definition" "setup_job_server" {
 [
   {
     "name": "setup-job-server",
-    "image": "278380418400.dkr.ecr.eu-west-2.amazonaws.com/job-server:latest",
+    "image": "aztec/job-server:latest",
     "essential": true,
     "portMappings": [
       {

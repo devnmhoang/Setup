@@ -45,6 +45,12 @@ export class App {
 
   private updateState = async () => {
     try {
+      // console.log("\nupdateState: " + this.state);
+      // const address = Address.fromString("0x879b0b268dba7668678fefe283a9995fb5f8cbeb");
+      // await this.server.ping(address);
+      // console.log("updateState: address" + address);
+
+      // this.account.address
       // Then get the latest state from the server.
       const remoteStateDelta = await this.server.getState(this.state ? this.state.sequence : undefined);
 
@@ -52,13 +58,18 @@ export class App {
       if (!this.state) {
         if (this.account && this.participantIsOnline(remoteStateDelta, this.account.address)) {
           this.terminalInterface.error = 'Participant is already online. Is another container already running?';
+          // console.log("Participant is already online. Is another container already running?");
           throw new Error('Participant is already online.');
         }
         this.state = remoteStateDelta;
       } else if (this.state.startSequence !== remoteStateDelta.startSequence) {
+        // console.log("await this.server.getState");
         this.state = await this.server.getState();
+        // console.log("1- this.state: " + this.state);
       } else {
+        // console.log("applyDelta(this.state, remoteStateDelta)");
         this.state = applyDelta(this.state, remoteStateDelta);
+        // console.log("2- this.state: " + this.state);
       }
 
       this.terminalInterface.lastUpdate = moment();

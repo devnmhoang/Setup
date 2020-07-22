@@ -51,7 +51,7 @@ resource "aws_ecs_task_definition" "setup_mpc_map" {
 [
   {
     "name": "setup-mpc-map",
-    "image": "278380418400.dkr.ecr.eu-west-2.amazonaws.com/setup-mpc-map:latest",
+    "image": "aztec/setup-mpc-map:latest",
     "essential": true,
     "portMappings": [
       {

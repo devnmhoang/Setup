@@ -16,7 +16,7 @@ async function main() {
   process.once('SIGINT', shutdown);
   process.once('SIGTERM', shutdown);
 
-  const adminAddress = Address.fromString('0x3a9b2101bff555793b85493b5171451fa00124c8');
+  const adminAddress = Address.fromString('0x94F5B16552DCEaCbAdABA146D6e3235f4A8617a8');
   const participantSelectorFactory = new ParticipantSelectorFactory(adminAddress, INFURA_API_KEY);
   const latestBlock = await participantSelectorFactory.getCurrentBlockHeight('ropsten');
   const defaults = defaultState(latestBlock);

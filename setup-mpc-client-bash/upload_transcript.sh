@@ -3,7 +3,7 @@ set -e
 set -x
 
 : ${ETH_URL=http://localhost:8545}
-: ${API_URL=https://ignition.aztecprotocol.com}
+: ${API_URL=http://localhost:8081}
 : ${SETUP_DIR=$(pwd)/setup_db}
 : ${TRANSCRIPT=0}
 : ${TRANSCRIPT_POSTFIX=_out}

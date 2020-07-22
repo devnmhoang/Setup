@@ -110,6 +110,7 @@ export function appFactory(
   });
 
   router.get('/ping/:address', koaBody(), async (ctx: Koa.Context) => {
+    console.log('- Calling ping ...')
     const signature = ctx.get('X-Signature');
     const address = Address.fromString(ctx.params.address.toLowerCase());
     if (!address.equals(recover('ping', signature))) {

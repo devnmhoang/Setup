@@ -29,19 +29,19 @@ For experienced users that wish to perform the computation as fast as possible, 
 To ensure the user has the latest version of the client application, first run:
 
 ```
-docker pull aztecprotocol/setup-mpc-client
+docker pull aztec/setup-mpc-client
 ```
 
 The client application can be launched as follows:
 
 ```
-docker run -ti -e PRIVATE_KEY=<private key hex> aztecprotocol/setup-mpc-client
+docker run -ti -e PRIVATE_KEY=<private key hex> aztec/setup-mpc-client
 ```
 
 Example:
 
 ```
-docker run -ti -e PRIVATE_KEY=0x469844c8ae3d0a18ec3f52779cd0e6d87a3c0395176f575d50e5810a086cf311 aztecprotocol/setup-mpc-client
+docker run -ti -e PRIVATE_KEY=0x469844c8ae3d0a18ec3f52779cd0e6d87a3c0395176f575d50e5810a086cf311 aztec/setup-mpc-client
 ```
 
 ## Dress Rehersal

@@ -14,7 +14,7 @@ const app = new Koa();
 if (process.env.NODE_ENV !== 'production') {
   app.use(
     proxy({
-      host: 'https://ignition.aztecprotocol.com',
+      host: 'http://localhost:8081',
       match: /^\/api\//,
     })
   );

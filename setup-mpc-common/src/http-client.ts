@@ -43,14 +43,17 @@ export class HttpClient implements MpcServer {
 
   public async getState(sequence?: number): Promise<MpcState> {
     const url = new URL(`${this.apiUrl}/state`);
+    // console.log('getState: ' + this.apiUrl + " | sequence: " + sequence)
     if (sequence !== undefined) {
       url.searchParams.append('sequence', `${sequence}`);
     }
     const response = await fetch(url.toString(), this.opts);
     if (response.status !== 200) {
-      throw new Error(`Bad status code from server: ${response.status}`);
+      // console.log('getState: response.status !== 200')
+      throw new Error(`Bad status code from server: ${response.status} - URL: ${url}`);
     }
     const json = await response.json();
+    // console.log('getState => response json: ' + json)
 
     return mpcStateFromJSON(json);
   }
@@ -68,7 +71,7 @@ export class HttpClient implements MpcServer {
       },
     });
     if (response.status !== 200) {
-      throw new Error(`Bad status code from server: ${response.status}`);
+      throw new Error(`Bad status code from server: ${response.status} - URL: ${this.apiUrl}`);
     }
   }
 
@@ -96,7 +99,7 @@ export class HttpClient implements MpcServer {
       body,
     });
     if (response.status !== 200) {
-      throw new Error(`Bad status code from server: ${response.status}`);
+      throw new Error(`Bad status code from server: ${response.status} - URL: ${this.apiUrl}`);
     }
   }
 

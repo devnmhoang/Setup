@@ -2,11 +2,11 @@ version: '3'
 services:
   setup-mpc-client:
     build: .
-    image: aztecprotocol/setup-mpc-client
+    image: aztec/setup-mpc-client
     tty: true
     environment:
-      API_URL: 'http://setup-mpc-server/api'
-      PRIVATE_KEY: '0xf90214f59d15c663d4d13b06b115838ee8a397af1dbf6535479a818d6e32a26a'
+      API_URL: 'http://localhost:8081/api'
+      PRIVATE_KEY: 'bd35ed6ecf65de973d82d81692075e24dd1c432f780cee3ab34cef5a56e1d751'
     volumes:
       - .:/usr/src/setup-mpc-client
       - ../setup-mpc-common:/usr/src/setup-mpc-client/node_modules/setup-mpc-common

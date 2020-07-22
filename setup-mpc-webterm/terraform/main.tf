@@ -51,7 +51,7 @@ resource "aws_ecs_task_definition" "setup_mpc_webterm" {
 [
   {
     "name": "setup-mpc-webterm",
-    "image": "278380418400.dkr.ecr.eu-west-2.amazonaws.com/setup-mpc-webterm:latest",
+    "image": "aztec/setup-mpc-webterm:latest",
     "essential": true,
     "portMappings": [
       {

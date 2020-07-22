@@ -36,7 +36,7 @@ resource "aws_ecs_task_definition" "setup_mpc_alerts" {
 [
   {
     "name": "setup-mpc-alerts",
-    "image": "278380418400.dkr.ecr.eu-west-2.amazonaws.com/setup-mpc-alerts:latest",
+    "image": "aztec/setup-mpc-alerts:latest",
     "essential": true,
     "environment": [
       {

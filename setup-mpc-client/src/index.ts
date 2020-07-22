@@ -5,7 +5,7 @@ import { App } from './app';
 
 async function main() {
   const {
-    API_URL = 'https://ignition.aztecprotocol.com/api',
+    API_URL = 'http://localhost:8081/api',
     PRIVATE_KEY = '',
     COMPUTE_OFFLINE = 0,
     EXIT_ON_COMPLETE = 0,
@@ -16,6 +16,7 @@ async function main() {
   }
 
   const myAccount = PRIVATE_KEY ? Account.fromPrivate(hexToBuffer(PRIVATE_KEY)) : undefined;
+  console.log("Account: "+myAccount)
   const server = new HttpClient(API_URL, myAccount);
   const app = new App(
     server,
